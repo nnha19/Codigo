@@ -1,0 +1,74 @@
+.desktopNav {
+  &Lists {
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  &List {
+    margin-right: 60px;
+    transition: all 0.4s;
+    cursor: pointer;
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      transition: all 0.4s;
+      height: 1px;
+      background-color: black;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &List {
+    margin-right: 60px;
+    transition: all 0.4s;
+    cursor: pointer;
+    &::after {
+      content: "";
+      display: block;
+      width: 0;
+      transition: all 0.4s;
+      height: 1px;
+      background-color: black;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  &Btn {
+    background-color: var(--secondary-color);
+    color: white;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 244rem;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.4s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  &active {
+    color: var(--secondary-color);
+  }
+}
+
+.navActive {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+  .desktopNavLists {
+    display: none;
+  }
+}
