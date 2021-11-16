@@ -9,8 +9,12 @@ import {
   AiFillLinkedin,
 } from "react-icons/ai";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
 const MobileNav = () => {
+  const {
+    query: { projectDetail },
+  } = useRouter();
   const hamburgerRef = useRef();
   const closeRef = useRef();
 
@@ -32,7 +36,6 @@ const MobileNav = () => {
 
   const toggleNavLinks = (boolean) => {
     setShowNavLinks(boolean);
-    console.log(boolean);
   };
 
   return (
@@ -56,20 +59,30 @@ const MobileNav = () => {
         className={`${styles.mobileNavLists} ${!showNavLinks && styles.hidden}`}
       >
         <ul>
-          <NavLink className={styles.mobileNavList} href="/work">
-            Work
-          </NavLink>
-          <NavLink className={styles.mobileNavList} href="/solutions">
-            Solutions
-          </NavLink>
-          <NavLink className={styles.mobileNavList} href="/services">
-            Services
-          </NavLink>
-          <NavLink className={styles.mobileNavList} href="/about-us">
-            About Us
+          {!projectDetail && (
+            <>
+              <NavLink className={styles.mobileNavList} href="/work">
+                Work
+              </NavLink>
+              <NavLink className={styles.mobileNavList} href="/solutions">
+                Solutions
+              </NavLink>
+              <NavLink className={styles.mobileNavList} href="/services">
+                Services
+              </NavLink>
+              <NavLink className={styles.mobileNavList} href="/about-us">
+                About Us
+              </NavLink>
+              <NavLink className={styles.mobileNavList} href="/blog">
+                Blog
+              </NavLink>
+            </>
+          )}
+          <NavLink className={styles.mobileNavList} href="/blog">
+            Request A Quote
           </NavLink>
           <NavLink className={styles.mobileNavList} href="/blog">
-            Blog
+            Let's Chat
           </NavLink>
         </ul>
         <div className={styles.socials}>

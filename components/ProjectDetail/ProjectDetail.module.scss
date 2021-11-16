@@ -12,6 +12,7 @@
     position: relative;
 
     &Body {
+      animation: slideUp 1s;
       h1 {
         font-size: 3rem;
         margin-bottom: 3rem;
@@ -27,15 +28,16 @@
 
     &Imgs {
       position: relative;
-      img {
-        height: 100%;
-        width: 100%;
-        z-index: 100;
-        position: relative;
-        animation: fadeIn 1s;
-        animation-delay: 1s;
-        animation-fill-mode: backwards;
-      }
+    }
+    &Img {
+      height: 100%;
+      width: 100%;
+      z-index: 100;
+      position: relative;
+      animation: fadeIn 1s;
+      animation-delay: 1s;
+      animation-fill-mode: backwards;
+      transition: all 0.4s;
     }
     @media (max-width: 1100px) {
       grid-template-columns: 1fr;
@@ -109,7 +111,11 @@
     max-height: 580px;
   }
 }
-
+.btns {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+}
 .btn {
   height: 7rem;
   width: 7rem;
@@ -131,6 +137,13 @@
     transform: scale(1.2);
     box-shadow: 0 5px 25px 0 rgb(0 0 0 / 40%), 0 5px 5px 0 rgb(0 0 0 / 20%);
   }
+
+  @media (max-width: 600px) {
+    position: static;
+    margin: 0 !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
 }
 .nextBtn {
   left: unset;
@@ -138,6 +151,25 @@
   justify-content: flex-start;
   padding-left: 1rem;
   margin-right: -4rem;
+}
+
+.navigation {
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+  &List {
+    height: 12px;
+    width: 12px;
+    display: block;
+    background: #cacaca;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+    cursor: pointer;
+  }
+}
+
+.activeImg {
+  background-color: var(--primary-color);
 }
 
 @keyframes backgroundScale {
@@ -157,5 +189,16 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(4rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

@@ -17,6 +17,27 @@
   }
 }
 
+.navBackBtn {
+  cursor: pointer;
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    transition: all 0.4s;
+    height: 1px;
+    background-color: black;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+  span {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+  }
+}
+
 @keyframes slideDown {
   from {
     opacity: 0;

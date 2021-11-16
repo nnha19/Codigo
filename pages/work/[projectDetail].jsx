@@ -19,6 +19,7 @@ const ProjectDetailPage = () => {
       );
     setProject(project);
   }, [projectDetail]);
+
   return <>{project && <ProjectDetail project={project} />}</>;
 };
 

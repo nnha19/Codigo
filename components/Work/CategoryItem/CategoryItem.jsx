@@ -12,9 +12,10 @@ const CategoryItem = ({ projects }) => {
       .join("-")}`;
     push(nextRoute);
   };
-  const projectsList = projects.map((project) => {
+  const projectsList = projects.map((project, i) => {
     return (
       <div
+        key={i}
         onClick={() => navigateToWorkDetailHandler(project)}
         className={styles.project}
       >
@@ -24,9 +25,9 @@ const CategoryItem = ({ projects }) => {
           <p className={styles.boldHeader}>{project.secondTitle}</p>
         </div>
         <div className={styles.projectIcons}>
-          {project.icons.map((icon) => {
+          {project.icons.map((icon, i) => {
             return (
-              <div className={styles.projectIconContainer}>
+              <div key={i} className={styles.projectIconContainer}>
                 <img className={styles.svgIcon} src={icon} alt="" />
               </div>
             );
