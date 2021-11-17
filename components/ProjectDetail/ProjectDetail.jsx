@@ -34,6 +34,7 @@ const ProjectDetail = ({ project }) => {
   });
 
   useEffect(() => {
+    if (!curImg || !curImgRef.current) return;
     curImgRef.current.style.transition = "all .4s";
     setTimeout(() => {
       curImgRef.current.style.opacity = "1";
