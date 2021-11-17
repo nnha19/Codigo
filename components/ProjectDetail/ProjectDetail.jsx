@@ -92,12 +92,15 @@ const ProjectDetail = ({ project }) => {
           </div>
         </div>
         <div className={styles.projectDisplayImgs}>
-          <div className={styles.background}></div>
-          {/* <img
+          <div
+            style={{ backgroundColor: project.bgColor }}
+            className={styles.background}
+          ></div>
+          <img
             ref={curImgRef}
             className={styles.projectDisplayImg}
             src={curImg}
-          /> */}
+          />
           <div className={styles.navigation}>{navigationList}</div>
         </div>
       </div>

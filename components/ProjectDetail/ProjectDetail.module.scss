@@ -88,7 +88,6 @@
 }
 
 .background {
-  background: green;
   border-radius: 100rem;
   width: 50vw;
   height: 50vw;
@@ -97,6 +96,7 @@
   position: absolute;
   left: 6rem;
   top: 6rem;
+
   animation: backgroundScale 1s;
   @media (max-width: 1400px) {
     max-width: 480px;
