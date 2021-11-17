@@ -12,11 +12,10 @@ const Navbar = () => {
   return (
     <nav className={styles.nav}>
       {!projectDetail ? (
-        // <img
-        //   className={styles.navLogo}
-        //   src="https://www.codigo.co/img/ui/logo-codigo-red.svg"
-        // />
-        ""
+        <img
+          className={styles.navLogo}
+          src="https://www.codigo.co/img/ui/logo-codigo-red.svg"
+        />
       ) : (
         <p onClick={() => push("/work")} className={styles.navBackBtn}>
           <span>←</span> Back To Work
