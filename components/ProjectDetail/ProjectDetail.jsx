@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./ProjectDetail.module.scss";
-import { AiFillApple } from "react-icons/Ai";
-import { FaGooglePlay } from "react-icons/Fa";
+import { AiFillApple } from "react-icons/ai";
+import { FaGooglePlay } from "react-icons/fa";
 import { useRouter } from "next/router";
 import { projects } from "../../DUMMY_DATA/DUMMY_ITEMS";
 
