@@ -92,11 +92,11 @@ const ProjectDetail = ({ project }) => {
         </div>
         <div className={styles.projectDisplayImgs}>
           <div className={styles.background}></div>
-          <img
+          {/* <img
             ref={curImgRef}
             className={styles.projectDisplayImg}
             src={curImg}
-          />
+          /> */}
           <div className={styles.navigation}>{navigationList}</div>
         </div>
       </div>

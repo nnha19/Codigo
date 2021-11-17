@@ -3,6 +3,7 @@ import styles from "./Work.module.scss";
 import { useRouter } from "next/router";
 import { projects as categoryProjects } from "../../DUMMY_DATA/DUMMY_ITEMS";
 import CategoryItem from "./CategoryItem/CategoryItem";
+import Image from "next/image";
 
 const Work = () => {
   const { push } = useRouter();
@@ -68,19 +69,19 @@ const Work = () => {
             <h2>Legend</h2>
             <ul className={styles.services}>
               <li>
-                <img src="https://www.codigo.co/img/ui/ico-app.svg" />
+                {/* <img src="https://www.codigo.co/img/ui/ico-app.svg" /> */}
                 <span>App</span>
               </li>
               <li>
-                <img src="https://www.codigo.co/img/ui/ico-web.svg" />
+                {/* <img src="https://www.codigo.co/img/ui/ico-web.svg" /> */}
                 <span>Web</span>
               </li>
               <li>
-                <img src="https://www.codigo.co/img/ui/ico-cms.svg" />
+                {/* <img src="https://www.codigo.co/img/ui/ico-cms.svg" /> */}
                 <span>CMS</span>
               </li>
               <li>
-                <img src="https://www.codigo.co/img/ui/ico-uiux.svg" />
+                {/* <img src="https://www.codigo.co/img/ui/ico-uiux.svg" /> */}
                 <span>UI/UX</span>
               </li>
             </ul>

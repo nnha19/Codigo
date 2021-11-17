@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer className={`${styles.contactSection} wrapper`}>
       <div className={styles.contact}>
-        <h1 className={styles.contactHeader}>Let's have a chat</h1>
+        <h1 className={styles.contactHeader}>Let&apos;s have a chat</h1>
         <div className={styles.contactReasons}>
           <div className={styles.contactReason}>
             <h2>

@@ -19,7 +19,7 @@ const CategoryItem = ({ projects }) => {
         onClick={() => navigateToWorkDetailHandler(project)}
         className={styles.project}
       >
-        <img className={styles.projectImg} src={project.img} alt="" />
+        {/* <img className={styles.projectImg} src={project.img} alt="" /> */}
         <div className={styles.projectTitle}>
           <p>{project.title}</p>
           <p className={styles.boldHeader}>{project.secondTitle}</p>
@@ -28,7 +28,7 @@ const CategoryItem = ({ projects }) => {
           {project.icons.map((icon, i) => {
             return (
               <div key={i} className={styles.projectIconContainer}>
-                <img className={styles.svgIcon} src={icon} alt="" />
+                {/* <img className={styles.svgIcon} src={icon} alt="" /> */}
               </div>
             );
           })}

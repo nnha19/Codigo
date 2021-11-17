@@ -82,7 +82,7 @@ const MobileNav = () => {
             Request A Quote
           </NavLink>
           <NavLink className={styles.mobileNavList} href="/blog">
-            Let's Chat
+            Let&apos;s Chat
           </NavLink>
         </ul>
         <div className={styles.socials}>
